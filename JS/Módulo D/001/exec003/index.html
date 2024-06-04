@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+</head>
+<body>
+    <h1>Multas</h1>
+    <p>Qual a velocidade que o carro estava?</p>
+    <input type="number" name="txtvel" id="txtvel"> Km/h
+    <input type="button" value="Verificar" onclick="verificar()">
+
+
+    <script>
+        function verificar(){
+            var tvel = document.getElementById('txtvel')
+
+            var vel = Number(tvel.value)
+
+            if (vel >100){
+                alert(`Sua velocidade foi de ${vel}, por isso o senhor está multado`)
+            } else {
+                alert(`Sua velocidade foi de ${vel}, por isso o senho nao foi multado`)
+            }
+        }
+    </script>
+</body>
+</html>

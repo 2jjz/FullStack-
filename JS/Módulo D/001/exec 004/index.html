@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>De onde você é?</h1>
+    <p>Qual seu pais?</p> <!-- Pergunta -->
+    <input type="text" name="txt" id="txt"> <!-- caixa de texto para colocar a resposta -->
+    <input type="button" value="Enviar" onclick="resultado()"> <!-- botao -->
+    <div id="res"> <!-- onde irá aparecer o resultado -->
+
+    <script>
+
+        function resultado() {//função
+            var tb = document.getElementById('txt') // pegou a caixa de texto do html e trouxe para o JS
+            var res = document.getElementById('res') // pegou a div onde será colocado a resposta e trouxe para o JS
+            var nac = (txt.value) // comando para guardar em variavel nac o que foi digitado na caixa de texto
+
+            res.innerHTML = `Você nasceu em ${nac} `// primeira resposta e que independente da resposta da pessoa nao muda
+            if( nac == 'Brasil'){ //caso a pessoa seja do Brasil aparecerá essa mensagem
+                res.innerHTML += `Você é brasileiro, meu camarada!`
+            } else { // caso seja de outro pais aparecerá essa mensagem
+                res.innerHTML += `You Gringo po, pra gringo é mais caro!!`
+            }
+        }
+    </script>
+</body>
+</html>

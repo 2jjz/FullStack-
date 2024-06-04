@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando numeros</title>
+    <style>
+        body {
+            font: normal 18pt Arial;
+        }
+
+        input{
+            font: normal 18pt Arial;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando valores</h1>
+    <input type="number" name="txtn1" id="txtn1">
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="Somar" onclick="somar()">
+    <div id="res">
+        resultado
+    </div>
+
+
+    <script>
+        function somar() {
+            //Significa que peguei o ID txtn1 do html, trouxe para o JS e coloquei ele em uma variavel com o nome de tn1(tn1 = caixa de textp)
+            var tn1 = document.getElementById('txtn1')
+            //outra forma de pegar esse ID do html
+            var tn2 = document.querySelector('input#txtn2')
+            //estou trazendo aquele RES para o JS para poder "linkar" com o resultado do calculo
+            var res = document.getElementById('res')
+
+            //estou pegando o valor de dentro da caixa de texto(tn1) e transofmando em n1 para fazer os calculos
+            //o number é para transformar a string em numero, poderia usar o Number.parseint para numeros inteiros apenas ou o parseflooat, mas irei usar o number apenas por para o proposito ele pode ser os dois
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            //criei uma variavel para o resultado
+            var s = n1 + n2
+            //estou fazendo com que apareca na pagina na parte onde era resultado apareca o codigo de baixo
+            res.innerHTML = `O resultado da conta entre ${n1} e ${n2} somam ${s}!!`
+
+        }
+    </script>
+</body>
+</html>

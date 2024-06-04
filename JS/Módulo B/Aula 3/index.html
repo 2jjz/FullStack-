@@ -1,0 +1,36 @@
+<!-- trazendo tags do HTML para o JS e exibindo eles -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* Estilo do site */
+    body {
+        background-color: rgb(68, 125, 199);
+        color: #fff;
+        font: normal 18pt Arial;
+    }
+
+
+</style>
+<body><!-- Estrutura do site -->
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>aprendendo a usar <strong>DOM</strong> em JS</p>
+    <div>Clique em mim</div>
+
+    <script>
+        /* ele esta buscando o paragrafo [0](significa que eh o primeiro paragrafo, se fosse o segundo seria [1])] */
+        var p1 = window.document.getElementsByTagName('p')[1]
+        /* innert Text ele pega o texto apenas */
+//         alert(p1.innerText)
+        /* innerHTML ele pega o pedaço em html ou seja, vai levar as tags junto */
+        alert(p1.innerHTML)
+
+    </script>
+
+</body>
+</html>
